@@ -23,13 +23,14 @@ module.exports.sendResetEmail = async (email, token) => {
       subject: 'Reset Password',
       html: `
       <div style="padding:20px;border:1px dashed #222;font-size:15px">
-        <tt>Hai 👋🏻<br><br>
-        Konfirmasikan email Anda untuk dapat digunakan. Kirim kode ini ke bot dan masa berlakunya akan habis dalam 3 menit.<br>
-        Atau klik url untuk menuju ke browser : <a href="${url}">${url}</a><br><br>
-        <hr style="border:0px; border-top:1px dashed #222"><br>
-        Regards, <b>${process.env.USER_NAME}</b>
-        </tt>
-      </div>
+         <tt>Hai zuvers👋🏻<br><br>
+         Untuk reset password silahkan klik tombol di bawah:<br><br>
+         <center><a style="display:inline-block;background-color: black;color: white;text-decoration: none;padding: 10px 20px;border-radius: 5px;border: none;cursor: pointer;transition:background-color 0.3s ease" href="${url}">Reset</a></center><br><br>
+         Jika setelah 30 menit tapi kamu belum klik tombol tersebut maka email ini sudah expired, silahkan kirim ulang disini: <a href="${url}">resend email</a>
+         <hr style="border:0px; border-top:1px dashed #222"><br>
+         Regards, <b>xinzuo chatbot</b>
+         </tt>
+     </div>
       `
     };
 
@@ -59,12 +60,13 @@ module.exports.sendVerifyEmail = async (email, token) => {
       subject: 'Email Verification',
       html: `
       <div style="padding:20px;border:1px dashed #222;font-size:15px">
-        <tt>Hai hai👋🏻<br><br>
-        Konfirmasikan email Anda untuk dapat digunakan. Kirim kode ini ke bot dan masa berlakunya akan habis dalam 3 menit.<br>
-        Atau klik url untuk menuju ke browser : <a href="${url}">${url}</a><br><br>
-        <hr style="border:0px; border-top:1px dashed #222"><br>
-        Regards, <b>${process.env.USER_NAME}</b>
-        </tt>
+         <tt>Hai zuvers👋🏻<br><br>
+         Untuk verifikasi email silahkan klik tombol di bawah:<br><br>
+         <center><a style="display:inline-block;background-color: black;color: white;text-decoration: none;padding: 10px 20px;border-radius: 5px;border: none;cursor: pointer;transition:background-color 0.3s ease" href="${url}">Verifikasi</a></center><br><br>
+         Jika setelah 30 menit tapi kamu belum klik tombol tersebut maka email ini sudah expired, silahkan kirim ulang disini: <a href="${url}">resend email</a>
+         <hr style="border:0px; border-top:1px dashed #222"><br>
+         Regards, <b>xinzuo chatbot</b>
+         </tt>
       </div>
       `
     };
